@@ -1,24 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[test passed]]>
+    </line>
   </reporter-output>
-  <suite started-at="2024-06-02T11:36:45 IST" name="Default suite" finished-at="2024-06-02T11:36:54 IST" duration-ms="9025">
+  <suite started-at="2024-06-02T11:56:00 IST" name="Default suite" finished-at="2024-06-02T11:56:04 IST" duration-ms="4629">
     <groups>
     </groups>
-    <test started-at="2024-06-02T11:36:45 IST" name="Default test" finished-at="2024-06-02T11:36:54 IST" duration-ms="9025">
+    <test started-at="2024-06-02T11:56:00 IST" name="Default test" finished-at="2024-06-02T11:56:04 IST" duration-ms="4629">
       <class name="extra.PracticeScript1">
-        <test-method signature="test1()[pri:1, instance:extra.PracticeScript1@1349883]" started-at="2024-06-02T11:36:45 IST" name="test1" finished-at="2024-06-02T11:36:52 IST" duration-ms="7103" status="PASS">
+        <test-method signature="test1()[pri:1, instance:extra.PracticeScript1@4b29d1d2]" started-at="2024-06-02T11:56:00 IST" name="test1" finished-at="2024-06-02T11:56:02 IST" duration-ms="2169" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method signature="test2()[pri:2, instance:extra.PracticeScript1@1349883]" started-at="2024-06-02T11:36:52 IST" name="test2" finished-at="2024-06-02T11:36:54 IST" duration-ms="1657" status="PASS">
+        <test-method signature="test2()[pri:2, instance:extra.PracticeScript1@4b29d1d2]" started-at="2024-06-02T11:56:02 IST" name="test2" finished-at="2024-06-02T11:56:04 IST" duration-ms="2166" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test2 -->
-        <test-method signature="test3()[pri:3, instance:extra.PracticeScript1@1349883]" started-at="2024-06-02T11:36:54 IST" name="test3" finished-at="2024-06-02T11:36:54 IST" duration-ms="222" status="PASS">
+        <test-method signature="test3()[pri:3, instance:extra.PracticeScript1@4b29d1d2]" started-at="2024-06-02T11:56:04 IST" name="test3" finished-at="2024-06-02T11:56:04 IST" duration-ms="24" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[test passed]]>
+            </line>
           </reporter-output>
         </test-method> <!-- test3 -->
+        <test-method signature="test4()[pri:4, instance:extra.PracticeScript1@4b29d1d2]" started-at="2024-06-02T11:56:04 IST" name="test4" finished-at="2024-06-02T11:56:04 IST" duration-ms="202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test4 -->
       </class> <!-- extra.PracticeScript1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
