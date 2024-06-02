@@ -1,5 +1,7 @@
 package extra;
 
+import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,6 +26,20 @@ public class PracticeScript1
 	
 	@Test(priority = 3)
 	public void test3()
+	{
+		if(driver.getTitle().equals("Google"))
+		{
+			Reporter.log("test passed");
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			Reporter.log("test failed");
+			Assert.assertTrue(false);
+		}
+	}
+	@Test(priority = 4)
+	public void test4()
 	{
 		//close browser
 		driver.quit();
