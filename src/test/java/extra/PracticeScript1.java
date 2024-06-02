@@ -21,4 +21,11 @@ public class PracticeScript1
 		//launch site
 		driver.get("https://www.google.com");
 	}
+	
+	@Test(priority = 3)
+	public void test3()
+	{
+		//close browser
+		driver.quit();
+	}
 }
