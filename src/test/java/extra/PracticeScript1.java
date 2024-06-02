@@ -6,11 +6,19 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class PracticeScript1 
 {
-	@Test
-	public void test()
+	WebDriver driver;
+	@Test(priority = 1)
+	public void test1()
 	{
 		//open browser
-		WebDriver driver = new ChromeDriver();
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
+	}
+	
+	@Test(priority = 2)
+	public void test2()
+	{
+		//launch site
+		driver.get("https://www.google.com");
 	}
 }
