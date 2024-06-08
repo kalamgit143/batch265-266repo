@@ -41,7 +41,7 @@ public class PracticeScript1
 	@Test(priority = 4)
 	public void test4()
 	{
-		//close browser
+		//close browser window
 		driver.quit();
 	}
 }
