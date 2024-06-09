@@ -1,4 +1,4 @@
-   pipeline {
+pipeline {
     agent any
     
     stages {
@@ -19,12 +19,12 @@
         stage('Run Tests') {
             steps {
                 // Run tests with TestNG
-                sh 'mvn test -Dsurefire.suiteXmlFiles=smoketesttestngsuite.xml'
+                sh 'mvn test -P run-suite-xml -DsuiteXmlFile=testng1.xml'
             }
             post {
                 always {
                     // Archive the test results
-                    archiveArtifacts(allowEmptyArchive: true, artifacts: '/target/index.html')
+                    archiveArtifacts(allowEmptyArchive: true, artifacts: 'target/surefire-reports/index.html')
                 }
             }
         }
@@ -33,10 +33,12 @@
     post {
         failure {
             // Send an email notification in case of build/test failures 
-            emailext subject: 'smoke test',
-                      body: 'Hi manager. Please check the build logs for details. Regards NAG',
-                      to: 'manager@mycompany.com',
-                      attachLog: true
+            emailext subject: 'Smoke Test Failure',
+                     body: '''Hi Manager,
+                              Please check the build logs for details.
+                              Regards, NAG''',
+                     to: 'magnitiait@gmail.com',
+                     attachLog: true
         }
     }
 }
