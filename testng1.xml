@@ -3,6 +3,7 @@
 <suite name="Suite" thread-count="2" parallel="classes">
   <test name="e2e test">
     <classes>
+	  <class name="extra.PracticeScript1"/>
       <class name="extra.PracticeScript2"/>
     </classes>
   </test> 
