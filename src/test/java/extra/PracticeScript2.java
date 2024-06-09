@@ -1,5 +1,6 @@
 package extra;
 
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -12,7 +13,7 @@ public class PracticeScript2
 	RequestSpecification req;
 	Response res;
 	
-	@Test
+	@Test(priority=1)
 	public void test()
 	{
 		req=RestAssured.given();
@@ -20,7 +21,21 @@ public class PracticeScript2
         req.basePath("search");
         req.queryParam("q","abdul kalam");
         res=req.get();
-        Reporter.log(res.asString());
+	}
+	
+	@Test(priority=2)
+	public void test2()
+	{
+		if(res.getStatusCode()==200 && res.asString().contains("abdul kalam"))
+		{
+			Reporter.log("status code test passed");
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			Reporter.log("status code test failed");
+			Assert.assertTrue(false);
+		}
 	}
 
 }
