@@ -26,6 +26,7 @@ public class PracticeScript2
 	@Test(priority=2)
 	public void test2()
 	{
+		//verify result
 		if(res.getStatusCode()==200 && res.asString().contains("abdul kalam"))
 		{
 			Reporter.log("status code test passed");
