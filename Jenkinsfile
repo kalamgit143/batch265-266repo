@@ -31,11 +31,11 @@ pipeline {
     }
     
     post {
-        failure {
-            // Send an email notification in case of build/test failures 
-            emailext subject: 'Smoke Test Failure',
+        always {
+            // Send an email notification in all cases
+            emailext subject: 'Jenkins Job Notification',
                      body: '''Hi Manager,
-                              Please check the build logs for details.
+                              The Jenkins job has completed. Please check the build logs for details.
                               Regards, NAG''',
                      to: 'magnitiait@gmail.com',
                      attachLog: true
