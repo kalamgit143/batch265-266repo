@@ -9,19 +9,22 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class PracticeScript1 
 {
 	WebDriver driver;
+	
 	@Test(priority = 1)
-	public void test1()
+	public void test1() throws Exception
 	{
 		//open browser
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
+		Thread.sleep(5000);
 	}
 	
 	@Test(priority = 2)
-	public void test2()
+	public void test2() throws Exception
 	{
 		//launch site
 		driver.get("https://www.google.com");
+		Thread.sleep(5000);
 	}
 	
 	@Test(priority = 3)
